@@ -1,0 +1,190 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Hamza Khan
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Tight margins for one page
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\definecolor{navy}{HTML}{1B3A6B}
+
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large\color{navy}
+}{}{0em}{}[\color{navy}\titlerule\vspace{-4pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1\vspace{-1pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{1pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\LARGE\scshape\color{navy} Hamza Khan} \\[3pt]
+  \small
+  +92-347-8479617 $|$
+  \href{mailto:muhammadhamzakhanmarwat@gmail.com}{\underline{muhammadhamzakhanmarwat@gmail.com}} $|$
+  \href{https://linkedin.com/in/muhammad-hamza-khan-4ab661297}{\underline{linkedin.com/in/muhammad-hamza-khan}} $|$
+  \href{https://github.com/Hamzachan69}{\underline{github.com/Hamzachan69}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {FAST NUCES}{Peshawar}
+    {Bachelor of Science in Computer Science}{Aug 2022 -- Present}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Junior Unity Game Developer}{Nov 2024 -- July 2025}
+    {Cognitive Force (Remote) · Lahore}{}
+    \resumeItemListStart
+      \resumeItem{Redesigned the full interface of the \textbf{Origami Configurator} app and ported it to a browser-based version, keeping all features intact --- 3D model viewing, product setup, pricing, and core construction tools.}
+      \resumeItem{Reduced app size for fast loading across devices without installation, and improved internal stability and performance.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Unity Intern}{June 2024 -- Aug 2024}
+    {Mindstorm Studios (MLabs) · Lahore}{}
+    \resumeItemListStart
+      \resumeItem{Built gameplay systems in Unity covering game logic, physics, and asset integration; refined mechanics through repeated playtesting.}
+      \resumeItem{Teamed up with three others at \textbf{Summer Rookie Game Jam '24} to design and ship a complete 2D game within a tight deadline.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Professional Video Editor}{June 2023 -- Present}
+    {Upwork.com · Freelance}{}
+    \resumeItemListStart
+      \resumeItem{Edited client videos on AI topics --- cuts, pacing, captions, colour grading, and motion graphics --- consistently delivered on time with high client satisfaction.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{EmoSense --- AI Emotion Detection} $|$ \emph{Python, YOLOv8, OpenCV, PyTorch, ONNX}}{Jan -- May 2026}
+    \resumeItemListStart
+      \resumeItem{\textit{Semester AI Project} --- Real-time system that detects faces from a live camera feed and classifies each into one of seven emotions: Angry, Disgust, Fear, Happy, Neutral, Sad, or Surprise.}
+      \resumeItem{Two-stage pipeline: face detection model followed by a separately trained emotion classifier, trained on the RAF-DB dataset over 80 rounds; exported to ONNX for faster detection with GPU support.}
+      \resumeItem{App displays coloured boxes with emoji badges per face, a confidence slider, live emotion percentage bars, and a dominant emotion readout. Runs on Windows and Linux via a scripted setup system.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{LensCraft --- AI Portrait Mode App} $|$ \emph{C++, Python, OpenCV, rembg, Tkinter, ONNX, PyInstaller}}{2025 -- 2026}
+    \resumeItemListStart
+      \resumeItem{\textit{OS Course Project} (v1, C++): Co-built a CLI portrait-mode tool using OpenCV's GrabCut for subject isolation and POSIX semaphores to synchronize multithreaded pixel compositing across all available CPU cores.}
+      \resumeItem{Ported and extended the project to Python (v2): replaced the CLI with a custom Tkinter GUI featuring an animated splash screen, drag-and-drop image zones, and a side-by-side before/after comparison canvas.}
+      \resumeItem{Upgraded segmentation from GrabCut to AI-driven background removal via \texttt{rembg} (U\textsuperscript{2}-Net / ONNX), adding BLUR, GRAY, and TRANS modes; packaged as a standalone Windows executable with PyInstaller.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Origami Configurator} $|$ \emph{Unity, WebGL, C\#, REST APIs}}{2024 -- 2026}
+    \resumeItemListStart
+      \resumeItem{Designed and built the complete UI/UX, core logic, backend systems, and login APIs for a construction industry product configurator; developed and shipped basic functionality end-to-end across the mobile and browser-based versions.}
+      \resumeItem{Browser port supports full 3D model viewing, product configuration, pricing workflows, and core construction tools; original mobile app is live on the Google Play Store.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{2D Slingshot Game} $|$ \emph{C\#, Unity Game Engine, Visual Studio}}{June -- Aug 2024}
+    \resumeItemListStart
+      \resumeItem{Physics-based slingshot game with projectiles, zombie targets, and destructible obstacles; delivered as a complete Game Jam build.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Snake Game} $|$ \emph{C++, SFML, Visual Studio}}{March -- April 2023}
+    \resumeItemListStart
+      \resumeItem{Classic Snake remake with smooth controls, custom visuals, and well-structured code; tuned collision and frame logic for responsive gameplay.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages: }{\textit{Python · C / C++ / C\# · SQL · Bash / Shell Scripting}} \\[2pt]
+    \textbf{Tools \& Platforms: }{\textit{Git · GitHub · Unity · SFML · Linux · Oracle SQL Developer · Visual Studio · VS Code}} \\[2pt]
+    \textbf{AI / ML: }{\textit{YOLOv8 · PyTorch · OpenCV · ONNX · Deep Learning · Scikit-learn}} \\[2pt]
+    \textbf{Databases: }{\textit{Oracle SQL · MongoDB}} \hspace{10pt}
+    \textbf{Other: }{\textit{Video Editing (Premiere Pro, CapCut) · WebGL}}
+  }}
+\end{itemize}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{English: }{\textit{Professional Proficiency}} \hspace{10pt}
+    \textbf{Urdu: }{\textit{Native}} \hspace{10pt}
+    \textbf{Pashto: }{\textit{Native}}
+  }}
+\end{itemize}
+
+\end{document}
